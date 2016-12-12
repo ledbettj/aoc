@@ -24,8 +24,8 @@ defmodule ComputerTest do
 
   test "cp" do
         pgm = {
-      Instruction.new("cpy 10, a"),
-      Instruction.new("cpy a, b")
+      Instruction.new("cpy 10 a"),
+      Instruction.new("cpy a b")
     }
     c = Computer.new(pgm, %{a: 0, b: 0}) |> Computer.run
     assert c[:state] == %{a: 10, b: 10, ip: 2}
