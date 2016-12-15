@@ -17,12 +17,12 @@ end
 
 Infinity = 1.0 / 0.0
 
-t = (0..Infinity).find { |drop_time| drops_through?(discs, drop_time) }
-puts "part one: #{t}"
+t1 = (0..Infinity).find { |drop_time| drops_through?(discs, drop_time) }
+puts "part one: #{t1}"
 
 discs << { positions: 11, initial: 0 }
-t = (0..Infinity).find { |drop_time| drops_through?(discs, drop_time) }
-puts "part two: #{t}"
+t2 = (t1..Infinity).find { |drop_time| drops_through?(discs, drop_time) }
+puts "part two: #{t2}"
 
 __END__
 Disc #1 has 5 positions; at time=0, it is at position 2.
